@@ -1,0 +1,28 @@
+.root-pane {
+    -fx-background-color: #34495e; /* A dark, professional background color */
+}
+
+.title-label {
+    -fx-font-size: 32px; /* Makes the font size much bigger */
+    -fx-font-weight: bold; /* Makes the text bold */
+    -fx-text-fill: #ecf0f1; /* A light, visible color (off-white) */
+}
+
+.card-box {
+    -fx-alignment: center;
+    -fx-padding: 20px;
+}
+
+.refresh-button {
+    -fx-background-color: #e74c3c; /* A vibrant red */
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.refresh-button:hover {
+    -fx-background-color: #c0392b; /* Slightly darker red on hover for a good effect */
+}
