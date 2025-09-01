@@ -13,6 +13,9 @@ Troubleshooting notes:
 - The program expects a subdirectory named cards that contains 52 images labeled from 1.png to 52.png.
 - A subdirectory named css should include a file called style.css for visual styling purposes.
 - If the images or styles are not loading correctly, ensure the directory structure is set up correctly.
+
+My Reminder (How to Launch):
+java --module-path C:\Programming\Java\javafx-sdk-24.0.2\lib --add-modules javafx.controls,javafx.fxml --enable-native-access=javafx.graphics .\AssignmentCards.java
 */
 
 import javafx.animation.FadeTransition;
@@ -62,7 +65,7 @@ public class AssignmentCards extends Application {
 
         try {
             // Load CSS directly from the file system
-            scene.getStylesheets().add("css/style.css");
+            scene.getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
         } catch (Exception ex) {
             System.out.println("Warning: CSS not applied. Ensure css/style.css exists in the css folder.");
         }
@@ -83,7 +86,7 @@ public class AssignmentCards extends Application {
         Collections.shuffle(deck);
 
         for (int i = 0; i < DISPLAY_CARDS; i++) {
-            String filename = "cards/" + deck.get(i) + ".png";
+            String filename = getClass().getResource("/cards/" + deck.get(i) + ".png").toExternalForm();
             try {
                 // Load images directly from the cards folder
                 Image cardImage = new Image(filename);
