@@ -20,6 +20,7 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.Collections;
 import java.util.ArrayList;
+import java.util.Comparator; // Added import for Comparator -cms 20250914
 import java.util.List;
 
 public class UniqueWordSorter {
@@ -68,7 +69,11 @@ public class UniqueWordSorter {
         // Display unique words in descending order
         System.out.println("\n--- Unique Words in Descending Order ---");
         List<String> sortedList = new ArrayList<>(uniqueWords);
-        Collections.reverse(sortedList);
+        
+        // UPDATED: Sort the list directly in descending order using a Comparator. -cms 20250914
+        // This is more robust than reversing a pre-sorted list.
+        sortedList.sort(Comparator.reverseOrder());
+        
         printWordsWithLineLimit(sortedList);
 
         // Run inline test to verify functionality without file input
