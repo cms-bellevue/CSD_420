@@ -1,0 +1,55 @@
+/* mystyle.css
+   Styling for StyledCircles JavaFX program
+   - Defines classes and IDs for circle colors and borders
+   - Adds drop shadow and inner shadow effects
+   - Provides hover effects that scale circles slightly for emphasis
+*/
+
+.plaincircle {
+    -fx-fill: white;
+    -fx-stroke: black;
+    -fx-stroke-width: 2;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 4, 4);
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.plaincircle:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.circleborder {
+    -fx-stroke-width: 5;
+    -fx-stroke-dash-array: 12 2 4 2;
+}
+
+.border {
+    -fx-border-color: black;
+    -fx-border-width: 5;
+}
+
+#redcircle {
+    -fx-fill: linear-gradient(to bottom, #ff4d4d, #990000);
+    -fx-stroke: #660000;
+    -fx-stroke-width: 3;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.5), 8, 0.6, 0, 2);
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+#redcircle:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+#greencircle {
+    -fx-fill: radial-gradient(center 50% 50%, radius 70%, #66ff66, #006600);
+    -fx-stroke: #003300;
+    -fx-stroke-width: 3;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.5), 8, 0.6, 0, 2);
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+#greencircle:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
